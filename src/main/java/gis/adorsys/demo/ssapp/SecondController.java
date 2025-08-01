@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HelloWorldController {
+public class SecondController {
 
     @Autowired
-    @Qualifier("helloWorldService")
+    @Qualifier("secondService")
     private HelloWorldServiceInterface helloWorldService;
 
-    @GetMapping("/hello")
-    public String helloWorld() {
+    @GetMapping("/second")
+    public String secondEndpoint() {
         return helloWorldService.getHelloWorldMessage();
     }
 }

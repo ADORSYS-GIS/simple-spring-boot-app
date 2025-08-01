@@ -1,6 +1,9 @@
 services:
   neo4j:
-    image: bitnami/neo4j
+    image: neo4j
+    environment:
+      NEO4J_dbms_security_procedures_unrestricted: "algo.*,apoc.*"
+      NEO4JLABS_PLUGINS: '["apoc"]'
     ports:
       - "17687:7687"
       - "17474:7474"
