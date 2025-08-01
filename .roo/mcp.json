@@ -1,0 +1,55 @@
+{
+    "mcpServers": {
+        "neo4j-memory": {
+            "command": "uvx",
+            "args": [
+                "mcp-neo4j-memory@0.2.0"
+            ],
+            "env": {
+                "NEO4J_URI": "bolt://localhost:17687",
+                "NEO4J_USERNAME": "neo4j",
+                "NEO4J_PASSWORD": "bitnami1",
+                "NEO4J_DATABASE": "neo4j"
+            }
+        },
+        "neo4j-cipher": {
+            "command": "uvx",
+            "args": [
+                "mcp-neo4j-cypher@0.3.0"
+            ],
+            "env": {
+                "NEO4J_URI": "bolt://localhost:17687",
+                "NEO4J_USERNAME": "neo4j",
+                "NEO4J_PASSWORD": "bitnami1",
+                "NEO4J_DATABASE": "neo4j"
+            },
+            "disabled": false,
+            "autoApprove": [
+                "read_neo4j_cypher",
+                "get_neo4j_schema"
+            ],
+            "alwaysAllow": [
+                "get_neo4j_schema",
+                "read_neo4j_cypher"
+            ],
+            "disabledTools": [
+                "write_neo4j_cypher"
+            ]
+        },
+        "code-analyzer": {
+            "command": "npx",
+            "args": [
+                "@vymalo/code-graph-mcp"
+            ],
+            "disabled": false,
+            "alwaysAllow": [],
+            "env": {
+                "DEFAULT_DIR": "/Users/sse/Developer/simple-spring-boot-app",
+                "NEO4J_URL": "bolt://localhost:17687",
+                "NEO4J_USER": "neo4j",
+                "NEO4J_PASSWORD": "bitnami1",
+                "NEO4J_DATABASE": "neo4j"
+            }
+        }
+    }
+}
