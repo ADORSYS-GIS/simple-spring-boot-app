@@ -14,6 +14,6 @@ public class SecondController {
 
     @GetMapping("/second")
     public String secondEndpoint() {
-        return helloWorldService.getHelloWorldMessage();
+        return helloWorldService.getWorldMes();
     }
 }

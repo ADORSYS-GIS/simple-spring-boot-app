@@ -14,6 +14,6 @@ public class HelloWorldController {
 
     @GetMapping("/hello")
     public String helloWorld() {
-        return helloWorldService.getHelloWorldMessage();
+        return helloWorldService.getWorldMes();
     }
 }

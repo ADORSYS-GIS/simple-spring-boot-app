@@ -12,7 +12,7 @@ class HelloWorldServiceTest {
     void testGetHelloWorldMessage() {
         HelloWorldServiceInterface service = new HelloWorldService();
         String expected = "hello world";
-        String actual = service.getHelloWorldMessage();
+        String actual = service.getWorldMes();
         assertEquals(expected, actual, "The hello world message should be 'hello world'");
     }
 }
